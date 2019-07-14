@@ -1,10 +1,8 @@
 FROM orivil/nginx:latest
 
 RUN mkdir -p /www/html
-COPY html-update-server /www
-COPY start.sh /www
-COPY update-html.sh /www
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY ./ /www
+RUN mv -f /www/end-nginx.conf /etc/nginx/nginx.conf
 ENV PATH="/www:${PATH}"
 RUN cd /www/html && \
     git init && \
