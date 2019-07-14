@@ -12,5 +12,5 @@ RUN chmod +x /www/update-html.sh
 RUN chmod +x /www/start.sh
 RUN chmod +x /www/html-update-server
 WORKDIR /www/
-EXPOSE 8080
+EXPOSE 9093
 ENTRYPOINT ["start.sh"]
