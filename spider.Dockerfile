@@ -13,4 +13,5 @@ RUN chmod +x /www/start.sh
 RUN chmod +x /www/html-update-server
 WORKDIR /www/
 EXPOSE 9092
+ENV http_port=":7072"
 ENTRYPOINT ["start.sh"]
